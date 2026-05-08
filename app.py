@@ -199,18 +199,6 @@ def read_json_body(handler: BaseHTTPRequestHandler) -> dict:
     return json.loads(raw.decode("utf-8"))
 
 
-def require_auth(handler: BaseHTTPRequestHandler) -> bool:
-    auth_header = handler.headers.get("Authorization", "")
-    if not auth_header.startswith("Bearer "):
-        json_response(handler, {"error": "Unauthorized"}, HTTPStatus.UNAUTHORIZED)
-        return False
-    token = auth_header.split(" ", 1)[1]
-    if token not in TOKENS:
-        json_response(handler, {"error": "Unauthorized"}, HTTPStatus.UNAUTHORIZED)
-        return False
-    return True
-
-
 def public_payload(state: dict) -> dict:
     return state["site"]
 
@@ -230,11 +218,6 @@ class MeloniaHandler(BaseHTTPRequestHandler):
         if parsed.path == "/api/public":
             state = load_state()
             return json_response(self, public_payload(state))
-        if parsed.path == "/api/dev/data":
-            if not require_auth(self):
-                return
-            state = load_state()
-            return json_response(self, dev_payload(state))
         return self.serve_static(parsed.path)
 
     def do_POST(self) -> None:
@@ -278,18 +261,6 @@ class MeloniaHandler(BaseHTTPRequestHandler):
             state["applications"]["passports"].insert(0, entry)
             save_state(state)
             return json_response(self, {"ok": True, "entry": entry}, HTTPStatus.CREATED)
-
-        if parsed.path == "/api/dev/site":
-            if not require_auth(self):
-                return
-            body = read_json_body(self)
-            state = load_state()
-            site = state["site"]
-            for key in ["news", "allies", "ministries"]:
-                if key in body:
-                    site[key] = body[key]
-            save_state(state)
-            return json_response(self, {"ok": True, "site": site})
 
         json_response(self, {"error": "Not found"}, HTTPStatus.NOT_FOUND)
 
