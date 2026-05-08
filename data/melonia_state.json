@@ -1,7 +1,7 @@
 {
   "site": {
-    "name": "The Royal Kingdom of Melonia",
-    "motto": "FOR THE KING",
+    "name": "The Empire of Melonia",
+    "motto": "FOR THE EMPEROR",
     "founded": "24 November 2024",
     "capital": "Melonia Main",
     "flag": "melonia.png",
@@ -10,20 +10,20 @@
         "key": "meloniaMain",
         "name": "Melonia Main",
         "summary": {
-          "en": "The principal seat of the Kingdom and the ceremonial center of national administration.",
-          "nl": "De hoofdzetel van het Koninkrijk en het ceremoniële centrum van het nationale bestuur.",
-          "no": "Kongedømmets hovedsete og det seremonielle sentrum for den nasjonale administrasjonen.",
-          "it": "La sede principale del Regno e il centro cerimoniale dell'amministrazione nazionale."
+          "en": "The principal seat of the Empire and the ceremonial center of national administration.",
+          "nl": "De hoofdzetel van het Keizerrijk en het ceremoniële centrum van het nationale bestuur.",
+          "no": "Keizerdømmets hovedsete og det seremonielle sentrum for den nasjonale administrasjonen.",
+          "it": "La sede principale dell'Impero e il centro cerimoniale dell'amministrazione nazionale."
         }
       },
       {
         "key": "meloniaSouth",
         "name": "Melonia South",
         "summary": {
-          "en": "A southern territorial division represented within the wider kingdom structure.",
-          "nl": "Een zuidelijke territoriale afdeling die vertegenwoordigd is binnen de bredere koninkrijksstructuur.",
-          "no": "En sørlig territoriell inndeling representert i den bredere kongedømmestrukturen.",
-          "it": "Una divisione territoriale meridionale rappresentata all'interno della più ampia struttura del regno."
+          "en": "A southern territorial division represented within the wider empire structure.",
+          "nl": "Een zuidelijke territoriale afdeling die vertegenwoordigd is binnen de bredere keizerrijksstructuur.",
+          "no": "En sørlig territoriell inndeling representert i den bredere keizerdømmestrukturen.",
+          "it": "Una divisione territoriale meridionale rappresentata all'interno della più ampia struttura dell'impero."
         }
       },
       {
