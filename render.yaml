@@ -7,4 +7,3 @@ services:
     startCommand: python app.py
     routes:
       - type: static
-        path: /
