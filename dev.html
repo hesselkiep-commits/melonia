@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melonia Dev Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="hero">
+      <nav class="topnav">
+        <div class="wordmark">
+          <span class="wordmark__eyebrow">Administrative Access</span>
+          <strong class="wordmark__title">Melonia Dev Portal</strong>
+        </div>
+        <div class="topnav__controls">
+          <a class="button button--ghost" href="index.html" target="_blank" rel="noopener noreferrer">Open Public Site</a>
+        </div>
+      </nav>
+
+      <div class="hero__content">
+        <div class="hero__copy">
+          <p class="hero__overline">Protected Government Workspace</p>
+          <h1>Administrative Editing</h1>
+          <p class="hero__intro">Manage incoming applications, official news, allies, and ministry details through normal input fields. No JSON typing required.</p>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-facts">
+            <div>
+              <dt>Login Name</dt>
+              <dd>melonia</dd>
+            </div>
+            <div>
+              <dt>Login Code</dt>
+              <dd>MELGOV</dd>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="section">
+        <article class="panel" id="devLoginPanel">
+          <h3>Portal Login</h3>
+          <form class="official-form" id="devLoginForm">
+            <label>
+              <span>Username</span>
+              <input type="text" name="username" value="melonia" required>
+            </label>
+            <label>
+              <span>Code</span>
+              <input type="password" name="password" value="MELGOV" required>
+            </label>
+            <button class="button button--primary" type="submit">Sign In</button>
+          </form>
+          <p class="form-status" id="devLoginStatus"></p>
+        </article>
+      </section>
+
+      <section class="section" id="devDashboard" hidden>
+        <article class="panel">
+          <div class="panel-row">
+            <h3>Applications</h3>
+            <button class="button button--ghost" id="devRefreshButton" type="button">Refresh Data</button>
+          </div>
+          <div class="records-grid records-grid--dev">
+            <div>
+              <h4>Citizen Applications</h4>
+              <div class="record-list" id="devCitizenApplications"></div>
+            </div>
+            <div>
+              <h4>Passport Applications</h4>
+              <div class="record-list" id="devPassportApplications"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-row">
+            <h3>News Manager</h3>
+            <button class="button button--ghost" id="addNewsButton" type="button">Add News Item</button>
+          </div>
+          <form id="newsManagerForm">
+            <div class="manager-list" id="newsManagerList"></div>
+            <button class="button button--primary" type="submit">Save News</button>
+          </form>
+          <p class="form-status" id="newsEditorStatus"></p>
+        </article>
+
+        <article class="panel">
+          <div class="panel-row">
+            <h3>Allies Manager</h3>
+            <button class="button button--ghost" id="addAllyButton" type="button">Add Ally</button>
+          </div>
+          <form id="alliesManagerForm">
+            <div class="manager-list" id="alliesManagerList"></div>
+            <button class="button button--primary" type="submit">Save Allies</button>
+          </form>
+          <p class="form-status" id="alliesEditorStatus"></p>
+        </article>
+
+        <article class="panel">
+          <div class="panel-row">
+            <h3>Ministries Manager</h3>
+            <button class="button button--ghost" id="addMinistryButton" type="button">Add Ministry</button>
+          </div>
+          <form id="ministriesManagerForm">
+            <div class="manager-list" id="ministriesManagerList"></div>
+            <button class="button button--primary" type="submit">Save Ministries</button>
+          </form>
+          <p class="form-status" id="ministriesEditorStatus"></p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <template id="recordTemplate">
+    <article class="record-card">
+      <strong class="record-card__title"></strong>
+      <p class="record-card__meta"></p>
+      <p class="record-card__body"></p>
+    </article>
+  </template>
+
+  <script src="dev.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+{
+  "site": {
+    "name": "The Royal Kingdom of Melonia",
+    "motto": "FOR THE KING",
+    "founded": "24 November 2024",
+    "capital": "Melonia Main",
+    "flag": "melonia.png",
+    "territories": [
+      {
+        "key": "meloniaMain",
+        "name": "Melonia Main",
+        "summary": {
+          "en": "The principal seat of the Kingdom and the ceremonial center of national administration.",
+          "nl": "De hoofdzetel van het Koninkrijk en het ceremoniële centrum van het nationale bestuur.",
+          "no": "Kongedømmets hovedsete og det seremonielle sentrum for den nasjonale administrasjonen.",
+          "it": "La sede principale del Regno e il centro cerimoniale dell'amministrazione nazionale."
+        }
+      },
+      {
+        "key": "meloniaSouth",
+        "name": "Melonia South",
+        "summary": {
+          "en": "A southern territorial division represented within the wider kingdom structure.",
+          "nl": "Een zuidelijke territoriale afdeling die vertegenwoordigd is binnen de bredere koninkrijksstructuur.",
+          "no": "En sørlig territoriell inndeling representert i den bredere kongedømmestrukturen.",
+          "it": "Una divisione territoriale meridionale rappresentata all'interno della più ampia struttura del regno."
+        }
+      },
+      {
+        "key": "meloniaNorth",
+        "name": "Melonia North",
+        "summary": {
+          "en": "A northern territorial division forming part of the national framework of Melonia.",
+          "nl": "Een noordelijke territoriale afdeling die deel uitmaakt van het nationale kader van Melonia.",
+          "no": "En nordlig territoriell inndeling som utgjør en del av Melonias nasjonale rammeverk.",
+          "it": "Una divisione territoriale settentrionale che fa parte del quadro nazionale di Melonia."
+        }
+      }
+    ],
+    "ministries": [
+      {
+        "name": "Royal Household",
+        "title": "Royal Household and Court Affairs",
+        "description": "Maintains the ceremonial dignity, royal schedule, court protocol, and official household administration of the Crown.",
+        "minister": "J. MEL",
+        "focus": "Ceremony, royal protocol, and state presentation."
+      },
+      {
+        "name": "Council Affairs",
+        "title": "Council Affairs",
+        "description": "Coordinates council procedure, official resolutions, ministerial continuity, and constitutional administration.",
+        "minister": "N. MEL",
+        "focus": "Council administration and institutional continuity."
+      },
+      {
+        "name": "Foreign Affairs",
+        "title": "Foreign Affairs and Diplomatic Relations",
+        "description": "Oversees diplomatic correspondence, declarations, recognition matters, and official external communication.",
+        "minister": "N. MEL",
+        "focus": "Diplomacy, public relations, and state correspondence."
+      },
+      {
+        "name": "Internal Affairs",
+        "title": "Internal Affairs",
+        "description": "Responsible for internal administration, territorial coordination, registry oversight, and domestic governance.",
+        "minister": "H. MEL",
+        "focus": "Internal order and territorial administration."
+      },
+      {
+        "name": "Citizenship and Civil Register",
+        "title": "Citizenship and Civil Register",
+        "description": "Maintains citizenship applications, civil entries, population records, and administrative verification workflows.",
+        "minister": "King Vhagar",
+        "focus": "Citizenship status and public civil records."
+      },
+      {
+        "name": "Passports and National Documentation",
+        "title": "Passports and National Documentation",
+        "description": "Handles public passport requests, document formats, issuance review, and identity documentation standards.",
+        "minister": "R. MEL",
+        "focus": "Official documents, passports, and identity materials."
+      },
+      {
+        "name": "Culture and Ceremony",
+        "title": "Culture and Ceremony",
+        "description": "Preserves national symbolism, public traditions, ceremonial texts, and cultural representation of Melonia.",
+        "minister": "To be appointed",
+        "focus": "National identity, tradition, and ceremonial life."
+      },
+      {
+        "name": "Territorial Administration",
+        "title": "Territorial Administration",
+        "description": "Supports structured administration across Melonia Main, Melonia South, and Melonia North.",
+        "minister": "R. MEL",
+        "focus": "Territorial order and coordination between seats of the Kingdom."
+      },
+      {
+        "name": "Melonian Bureau of Investigation",
+        "title": "Melonian Bureau of Investigation",
+        "description": "Supports internal investigation, public record review, administrative integrity, and official state security inquiries within the lawful structure of the Kingdom.",
+        "minister": "R. MEL",
+        "focus": "Investigation, administrative review, and national security matters."
+      }
+    ],
+    "news": [
+      {
+        "id": "news-1",
+        "title": "The king is DEAD!?",
+        "date": "2026-05-08",
+        "summary": "After a announcement in the discord many people where wondering what happend to the king.\nthe king said that he was going to kill himself due to depression, yet he is still fine after a small brake.\nso no one is harmed"
+      }
+    ],
+    "allies": [
+      {
+        "id": "ally-1",
+        "name": "Nesforvia",
+        "status": "IKN member",
+        "notes": "Nesforvia is one of the Main nations of the IKN"
+      },
+      {
+        "id": "ally-1778251649589",
+        "name": "The republic of pinland",
+        "status": "IKN member",
+        "notes": ""
+      }
+    ]
+  },
+  "applications": {
+    "citizens": [],
+    "passports": []
+  }
+}

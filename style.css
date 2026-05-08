@@ -1,0 +1,452 @@
+:root {
+  --bg-top: #0d1f17;
+  --bg-mid: #122b21;
+  --bg-bottom: #07100c;
+  --panel: rgba(11, 24, 18, 0.78);
+  --panel-strong: rgba(11, 24, 18, 0.9);
+  --panel-soft: rgba(255, 255, 255, 0.04);
+  --line: rgba(190, 233, 178, 0.14);
+  --line-strong: rgba(190, 233, 178, 0.34);
+  --text: #eef8ef;
+  --muted: #adc4b0;
+  --accent: #f2d96b;
+  --accent-2: #8fd98b;
+  --danger: #ff9f92;
+  --success: #9ef1a1;
+  --shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(143, 217, 139, 0.14), transparent 26%),
+    linear-gradient(180deg, var(--bg-top), var(--bg-mid) 40%, var(--bg-bottom));
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.site-shell {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero,
+.panel,
+.topnav,
+.language-switcher button,
+.card,
+.record-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.hero,
+.panel,
+.topnav,
+.button,
+.language-switcher button,
+.card,
+.record-card {
+  border-radius: 24px;
+}
+
+.hero {
+  padding: 18px;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+}
+
+.topnav__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.wordmark__eyebrow,
+.hero__overline,
+.section__eyebrow,
+.panel__lead,
+.record-card__meta,
+.hero-facts dt,
+.official-form span,
+.form-status {
+  color: var(--muted);
+}
+
+.wordmark__eyebrow,
+.hero__overline,
+.section__eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.72rem;
+}
+
+.wordmark__title {
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.language-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.language-switcher button {
+  padding: 10px 14px;
+  color: var(--text);
+  cursor: pointer;
+  transition: 140ms ease;
+}
+
+.language-switcher button.is-active,
+.language-switcher button:hover,
+.button:hover {
+  border-color: var(--line-strong);
+  background: linear-gradient(135deg, rgba(143, 217, 139, 0.18), rgba(242, 217, 107, 0.12));
+}
+
+.hero__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(300px, 420px);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.hero__copy,
+.hero-card {
+  padding: 20px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.hero h1,
+.section-heading h2,
+.panel h3,
+.panel h4 {
+  margin: 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4.5vw, 4.8rem);
+  line-height: 0.96;
+  color: var(--accent);
+}
+
+.hero__motto {
+  margin: 14px 0 8px;
+  font-size: 1.2rem;
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
+.hero__intro,
+.section-heading p,
+.panel p,
+.card p,
+.record-card__body {
+  line-height: 1.7;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 18px;
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05);
+  cursor: pointer;
+  transition: 140ms ease;
+}
+
+.button--primary {
+  background: linear-gradient(135deg, rgba(242, 217, 107, 0.24), rgba(143, 217, 139, 0.14));
+  border-color: rgba(242, 217, 107, 0.34);
+}
+
+.button--ghost {
+  background: rgba(255,255,255,0.03);
+}
+
+.hero-card {
+  display: grid;
+  gap: 18px;
+}
+
+.hero-flag {
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.hero-facts {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.hero-facts div {
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: var(--panel-soft);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.hero-facts dt {
+  margin-bottom: 6px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.hero-facts dd {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.main-content {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.section {
+  display: grid;
+  gap: 16px;
+}
+
+.section--grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.section-heading {
+  max-width: 72ch;
+}
+
+.section-heading h2 {
+  font-size: clamp(1.7rem, 3vw, 3rem);
+  color: var(--accent);
+}
+
+.section-heading p {
+  margin: 12px 0 0;
+}
+
+.panel {
+  padding: 18px;
+}
+
+.panel h3,
+.panel h4,
+.card h3,
+.record-card__title {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.cards,
+.record-list,
+.official-form,
+.ministry-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.cards--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card,
+.record-card {
+  padding: 16px;
+}
+
+.government-layout,
+.register-layout,
+.records-grid,
+.dev-layout {
+  display: grid;
+  gap: 16px;
+}
+
+.government-layout,
+.register-layout,
+.records-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.dev-layout {
+  grid-template-columns: 340px minmax(0, 1fr);
+}
+
+.panel--wide {
+  grid-column: span 2;
+}
+
+.ministry-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ministry-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: var(--panel-soft);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.ministry-card strong {
+  display: block;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.ministry-card__meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.official-form label {
+  display: grid;
+  gap: 7px;
+}
+
+.official-form input,
+.official-form select,
+.official-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.05);
+}
+
+.official-form input:focus,
+.official-form select:focus,
+.official-form textarea:focus {
+  outline: 2px solid rgba(242, 217, 107, 0.25);
+  border-color: var(--line-strong);
+}
+
+.form-status {
+  min-height: 1.2em;
+  margin: 10px 0 0;
+}
+
+.form-status.is-success {
+  color: var(--success);
+}
+
+.form-status.is-error {
+  color: var(--danger);
+}
+
+.dev-dashboard {
+  display: grid;
+  gap: 16px;
+}
+
+.manager-list {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.panel--manager {
+  padding: 14px;
+  border-radius: 18px;
+}
+
+.records-grid--dev {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.panel-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 1180px) {
+  .hero__content,
+  .section--grid,
+  .cards--three,
+  .government-layout,
+  .register-layout,
+  .records-grid,
+  .dev-layout,
+  .records-grid--dev {
+    grid-template-columns: 1fr;
+  }
+
+  .panel--wide {
+    grid-column: auto;
+  }
+
+  .ministry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-shell {
+    padding: 12px;
+  }
+
+  .topnav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding: 12px;
+  }
+}
