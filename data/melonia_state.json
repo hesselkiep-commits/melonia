@@ -108,21 +108,22 @@
         "title": "The king is DEAD!?",
         "date": "2026-05-08",
         "summary": "After a announcement in the discord many people where wondering what happend to the king.\nthe king said that he was going to kill himself due to depression, yet he is still fine after a small brake.\nso no one is harmed"
+      },
+      {
+        "id": "news-2",
+        "title": "Melonia has changed",
+        "date": "2026-05-08",
+        "summary": "Melonia has changed its flag, and we have become an empire with a emperor"
+      },
+      {
+        "id": "news-3",
+        "title": "melonia left the IKN",
+        "date": "2026-05-08",
+        "summary": "Melonia left the IKN after much changes in the IKN and the fact that we have become an empire, we have decided to leave the IKN and focus on our own country"
       }
     ],
     "allies": [
-      {
-        "id": "ally-1",
-        "name": "Nesforvia",
-        "status": "IKN member",
-        "notes": "Nesforvia is one of the Main nations of the IKN"
-      },
-      {
-        "id": "ally-1778251649589",
-        "name": "The republic of pinland",
-        "status": "IKN member",
-        "notes": ""
-      }
+      {}
     ]
   },
   "applications": {
