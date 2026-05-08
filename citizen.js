@@ -1,20 +1,24 @@
-(function () {
+document.addEventListener("DOMContentLoaded", () => {
+
   emailjs.init("1AhPD7TUOryPKlbT9");
-})();
 
-document.getElementById("citizenForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+  const form = document.getElementById("citizenForm");
 
-  emailjs.send("service_469bafj", "template_bm3qvte", {
-    fullName: this.fullName.value,
-    birthDate: this.birthDate.value,
-    residence: this.residence.value,
-    territory: this.territory.value,
-    notes: this.notes.value
-  }).then(() => {
-    alert("Application sent!");
-    this.reset();
-  }, (error) => {
-    alert("Failed to send: " + error);
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    emailjs.send("service_469bafj", "template_bm3qvte", {
+      fullName: form.fullName.value,
+      birthDate: form.birthDate.value,
+      residence: form.residence.value,
+      territory: form.territory.value,
+      notes: form.notes.value
+    }).then(() => {
+      alert("Sent successfully!");
+      form.reset();
+    }).catch((err) => {
+      alert("Failed: " + JSON.stringify(err));
+    });
   });
+
 });
