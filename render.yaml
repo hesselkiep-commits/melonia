@@ -1,10 +1,10 @@
 services:
-- type: web
-name: melonia-backend
-runtime: python
-env: python3
-buildCommand: pip install -r requirements.txt
-startCommand: python app.py
-routes:
-- type: static
-path: /
+  - type: web
+    name: melonia-backend
+    runtime: python
+    env: python3
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    routes:
+      - type: static
+        path: /
