@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import secrets
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -321,4 +322,13 @@ def run() -> None:
 
 
 if __name__ == "__main__":
-    run()
+    config = load_server_config()
+
+    host = "0.0.0.0"
+    port = int(os.environ.get("PORT", config["port"]))
+
+    server = ThreadingHTTPServer((host, port), MeloniaHandler)
+
+    print(f"Melonia server running at http://{host}:{port}")
+
+    server.serve_forever()
