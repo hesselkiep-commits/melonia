@@ -5,5 +5,3 @@ services:
     env: python3
     buildCommand: pip install -r requirements.txt
     startCommand: python app.py
-    routes:
-      - type: static
