@@ -3,154 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Empire of Melonia</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Maintenance | The Empire of Melonia</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #07150d;
+      color: #f4d86a;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .box {
+      max-width: 700px;
+      padding: 40px;
+      border: 1px solid rgba(244,216,106,0.2);
+      border-radius: 20px;
+      background: rgba(0,0,0,0.35);
+    }
+
+    h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #d7d7d7;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-  <div class="site-shell">
-    <header class="hero" id="top">
-      <nav class="topnav">
-        <div class="wordmark">
-          <span class="wordmark__eyebrow" data-i18n="brandingEyebrow"></span>
-          <strong class="wordmark__title" id="siteNameTop"></strong>
-        </div>
 
-        <!-- ADDED: Citizen application link -->
-        <div class="topnav__links">
-          <a class="button button--ghost" href="citizen.html">
-            Citizen Application
-          </a>
-        </div>
+  <div class="box">
+    <h1>Maintenance</h1>
 
-      </nav>
+    <p>
+      The Imperial Public Portal of Melonia is currently undergoing maintenance.
+    </p>
 
-      <div class="hero__content">
-        <div class="hero__copy">
-          <p class="hero__overline" data-i18n="heroOverline"></p>
-          <h1 id="siteNameHero"></h1>
-          <p class="hero__motto" id="siteMotto"></p>
-          <p class="hero__intro" data-i18n="heroIntro"></p>
-
-          <div class="hero__actions">
-            <a class="button button--primary" href="#news" data-i18n="heroPrimaryAction"></a>
-            <a class="button" href="#news" data-i18n="heroSecondaryAction"></a>
-          </div>
-        </div>
-
-        <aside class="hero-card">
-          <div class="hero-flag">
-            <img src="melonia.png" alt="Flag of Melonia" id="flagImage">
-          </div>
-
-          <dl class="hero-facts">
-            <div>
-              <dt data-i18n="factFounded"></dt>
-              <dd id="siteFounded"></dd>
-            </div>
-
-            <div>
-              <dt data-i18n="factCapital"></dt>
-              <dd id="siteCapital"></dd>
-            </div>
-
-            <div>
-              <dt data-i18n="factTerritories"></dt>
-              <dd id="territoryCount"></dd>
-            </div>
-
-            <div>
-              <dt data-i18n="factGovernment"></dt>
-              <dd data-i18n="governmentShort"></dd>
-            </div>
-          </dl>
-        </aside>
-      </div>
-    </header>
-
-    <main class="main-content">
-
-      <section class="section section--grid" id="about">
-        <article class="panel panel--feature">
-          <p class="section__eyebrow" data-i18n="sectionAboutEyebrow"></p>
-          <h2 data-i18n="sectionAboutTitle"></h2>
-          <p data-i18n="sectionAboutBody"></p>
-        </article>
-
-        <article class="panel">
-          <p class="section__eyebrow" data-i18n="sectionMissionEyebrow"></p>
-          <h2 data-i18n="sectionMissionTitle"></h2>
-          <p data-i18n="sectionMissionBody"></p>
-        </article>
-      </section>
-
-      <section class="section" id="news">
-        <div class="section-heading">
-          <p class="section__eyebrow" data-i18n="sectionNewsEyebrow"></p>
-          <h2 data-i18n="sectionNewsTitle"></h2>
-          <p data-i18n="sectionNewsLead"></p>
-        </div>
-
-        <div class="cards cards--three" id="newsGrid"></div>
-      </section>
-
-      <section class="section" id="government">
-        <div class="section-heading">
-          <p class="section__eyebrow" data-i18n="sectionGovernmentEyebrow"></p>
-          <h2 data-i18n="sectionGovernmentTitle"></h2>
-          <p data-i18n="sectionGovernmentLead"></p>
-        </div>
-
-        <div class="government-layout">
-
-          <article class="panel">
-            <h3 data-i18n="sectionMonarchyTitle"></h3>
-            <p data-i18n="sectionMonarchyBody"></p>
-          </article>
-
-          <article class="panel">
-            <h3 data-i18n="sectionCouncilTitle"></h3>
-            <p data-i18n="sectionCouncilBody"></p>
-          </article>
-
-          <article class="panel panel--wide">
-            <h3 data-i18n="sectionMinistriesTitle"></h3>
-            <div class="ministry-grid" id="ministryGrid"></div>
-          </article>
-
-        </div>
-      </section>
-
-      <section class="section" id="territories">
-        <div class="section-heading">
-          <p class="section__eyebrow" data-i18n="sectionTerritoriesEyebrow"></p>
-          <h2 data-i18n="sectionTerritoriesTitle"></h2>
-          <p data-i18n="sectionTerritoriesLead"></p>
-        </div>
-
-        <div class="cards cards--three" id="territoryGrid"></div>
-      </section>
-
-      <section class="section" id="allies">
-        <div class="section-heading">
-          <p class="section__eyebrow" data-i18n="sectionAlliesEyebrow"></p>
-          <h2 data-i18n="sectionAlliesTitle"></h2>
-          <p data-i18n="sectionAlliesLead"></p>
-        </div>
-
-        <div class="cards cards--three" id="alliesGrid"></div>
-      </section>
-
-    </main>
+    <p>
+      Please return later.
+    </p>
   </div>
 
-  <template id="recordTemplate">
-    <article class="record-card">
-      <strong class="record-card__title"></strong>
-      <p class="record-card__meta"></p>
-      <p class="record-card__body"></p>
-    </article>
-  </template>
-
-  <script src="script.js"></script>
 </body>
 </html>
