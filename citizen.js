@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
           fullName: form.querySelector('[name="fullName"]').value,
           birthDate: form.querySelector('[name="birthDate"]').value,
           residence: form.querySelector('[name="residence"]').value,
+          email: form.querySelector('[name="email"]').value,
           territory: form.querySelector('[name="territory"]').value,
           notes: form.querySelector('[name="notes"]').value,
           name: form.querySelector('[name="fullName"]').value
