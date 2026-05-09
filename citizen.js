@@ -14,9 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
       territory: form.territory.value,
       notes: form.notes.value
     }).then(() => {
+      console.log("Email sent successfully!");
       alert("Sent successfully!");
       form.reset();
     }).catch((err) => {
+      console.error("Failed to send email:", err);
       alert("Failed: " + JSON.stringify(err));
     });
   });
