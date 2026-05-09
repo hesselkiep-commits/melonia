@@ -15,12 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
         "service_469bafj",
         "template_bm3qvte",
         {
-          fullName: form.fullName.value,
-          birthDate: form.birthDate.value,
-          residence: form.residence.value,
-          territory: form.territory.value,
-          notes: form.notes.value,
-          name: form.fullName.value
+          fullName: form.querySelector('[name="fullName"]').value,
+          birthDate: form.querySelector('[name="birthDate"]').value,
+          residence: form.querySelector('[name="residence"]').value,
+          territory: form.querySelector('[name="territory"]').value,
+          notes: form.querySelector('[name="notes"]').value,
+          name: form.querySelector('[name="fullName"]').value
         }
       );
 
