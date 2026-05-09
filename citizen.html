@@ -1,24 +1,248 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Citizen Application</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imperial Citizenship Application — The Empire of Melonia</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, #0d2a1f 0%, #04110c 60%);
+      color:white;
+    }
+
+    .application-shell{
+      max-width:900px;
+      margin:40px auto;
+      padding:30px;
+    }
+
+    .application-card{
+      border:1px solid rgba(255,215,100,0.15);
+      background:rgba(0,0,0,0.35);
+      backdrop-filter: blur(12px);
+      border-radius:24px;
+      padding:40px;
+      box-shadow:
+        0 0 30px rgba(0,255,100,0.05),
+        inset 0 0 20px rgba(255,215,100,0.03);
+    }
+
+    .flag-banner{
+      width:100%;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,0.08);
+      margin-bottom:30px;
+    }
+
+    .eyebrow{
+      text-transform:uppercase;
+      letter-spacing:3px;
+      color:#8fa394;
+      font-size:12px;
+      margin-bottom:10px;
+    }
+
+    h1{
+      color:#f0d46b;
+      font-size:52px;
+      margin-top:0;
+      margin-bottom:10px;
+    }
+
+    .subtitle{
+      color:#8fd48f;
+      font-weight:bold;
+      margin-bottom:25px;
+    }
+
+    .description{
+      color:#d4d4d4;
+      line-height:1.7;
+      margin-bottom:40px;
+    }
+
+    .official-box{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.06);
+      padding:20px;
+      border-radius:18px;
+      margin-bottom:30px;
+    }
+
+    .official-box strong{
+      color:#f0d46b;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    label{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      font-size:14px;
+      color:#d7d7d7;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+
+    input,
+    textarea{
+      background:#07130f;
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:14px;
+      padding:16px;
+      color:white;
+      font-size:15px;
+      outline:none;
+    }
+
+    input:focus,
+    textarea:focus{
+      border-color:#f0d46b;
+      box-shadow:0 0 15px rgba(240,212,107,0.15);
+    }
+
+    textarea{
+      resize:vertical;
+      min-height:120px;
+    }
+
+    .submit-btn{
+      margin-top:10px;
+      padding:18px;
+      border:none;
+      border-radius:18px;
+      background:linear-gradient(
+        135deg,
+        #8c7a2b,
+        #f0d46b
+      );
+      color:black;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.25s;
+    }
+
+    .submit-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 25px rgba(240,212,107,0.25);
+    }
+
+    .footer-note{
+      margin-top:25px;
+      color:#8fa394;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    @media(max-width:700px){
+
+      .application-shell{
+        padding:15px;
+      }
+
+      .application-card{
+        padding:25px;
+      }
+
+      h1{
+        font-size:38px;
+      }
+
+    }
+
+  </style>
 </head>
+
 <body>
 
-  <h1>Citizen Application Form</h1>
-  
-  <form id="citizenForm">
-    <input type="text" name="fullName" placeholder="Full Name" required><br><br>
-    <input type="date" name="birthDate" required><br><br>
-    <input type="text" name="residence" placeholder="Residence" required><br><br>
-    <input type="text" name="territory" placeholder="Territory" required><br><br>
-    <textarea name="notes" placeholder="Notes"></textarea><br><br>
+  <div class="application-shell">
 
-    <button type="submit">Submit</button>
-  </form>
+    <div class="application-card">
+
+      <img src="melonia.png" class="flag-banner">
+
+      <div class="eyebrow">
+        Ministry of Citizenship and Civil Affairs
+      </div>
+
+      <h1>
+        Imperial Citizenship Application
+      </h1>
+
+      <div class="subtitle">
+        THE EMPIRE OF MELONIA
+      </div>
+
+      <p class="description">
+        This official application form is submitted directly to the
+        Imperial Administration of Melonia for review and processing.
+        Submission of this form does not guarantee citizenship status
+        and may be subject to further administrative verification.
+      </p>
+
+      <div class="official-box">
+        <strong>Official Notice:</strong><br><br>
+
+        By submitting this application, the applicant confirms that
+        the provided information is truthful and acknowledges the
+        authority of the Empire of Melonia and its Imperial institutions.
+      </div>
+
+      <form id="citizenForm">
+
+        <label>
+          Full Legal Name
+          <input type="text" name="fullName" required>
+        </label>
+
+        <label>
+          Date of Birth
+          <input type="date" name="birthDate" required>
+        </label>
+
+        <label>
+          Place of Residence
+          <input type="text" name="residence" required>
+        </label>
+
+        <label>
+          Territorial Affiliation
+          <input type="text" name="territory" required>
+        </label>
+
+        <label>
+          Additional Notes
+          <textarea name="notes"></textarea>
+        </label>
+
+        <button type="submit" class="submit-btn">
+          Submit Imperial Application
+        </button>
+
+      </form>
+
+      <div class="footer-note">
+        Office of Citizenship • Empire of Melonia • Imperial Public Administration
+      </div>
+
+    </div>
+
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
   <script src="citizen.js"></script>
 
 </body>
